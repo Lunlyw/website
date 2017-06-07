@@ -44,6 +44,9 @@
 		text-align: center;
 		border: 2px solid #a4c2f4;
 	}
+	#app h1{
+		font-size:16px;
+		}
 	</style>
 	<script type="text/javascript">
 	
@@ -92,14 +95,19 @@
 		</div>
 	</div>
 	<div id="app">
-  	<p>{{ message }}</p>
+		<h1>
+			{{ message }}
+		</h1>
+  		<p v-html='includeFunction'></p>
 	</div>
+
 
 <script>
 	new Vue({
 	  	el: '#app',
 	  data: {
-	    message: 'Vue.js'
+	    message: 'Begin to write a list.',
+	    includeFunction:'<ul><li>save item</li><li>list item</li><li>new Page</li></ul>'
 	  }
 	})
 </script>

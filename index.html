@@ -8,10 +8,30 @@
 	*{margin:0;padding:0;font: normal 12px "微软雅黑";color: #000000}
 	ul{list-style-type: none;}
 	a{text-decoration: none;}
+	body{
+    background: -moz-linear-gradient(top, #ccffcc 0%, #66ccff 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ccffcc), color-stop(100%,#66ccff));
+    background: -webkit-linear-gradient(top, #ccffcc 0%,#66ccff 100%);
+    background: -o-linear-gradient(top, #ccffcc 0%,#66ccff 100%);
+    background: -ms-linear-gradient(top, #ccffcc 0%,#66ccff 100%);
+    background: linear-gradient(to bottom, #ccffcc 0%,#66ccff 100%);
+	}
 	#top-image{
 		width: auto;
 		height: 200px;
 		border:10px solid #a4c2f4;
+		background: -moz-linear-gradient(top, #ccffcc 0%, #66ccff 100%);
+    	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ccffcc), color-stop(100%,#66ccff));
+	    background: -webkit-linear-gradient(top, #ccffcc 0%,#66ccff 100%);
+	    background: -o-linear-gradient(top, #ccffcc 0%,#66ccff 100%);
+	    background: -ms-linear-gradient(top, #ccffcc 0%,#66ccff 100%);
+	    background: linear-gradient(to bottom, #ccffcc 0%,#66ccff 100%);
+	}
+	#top-2{
+		width: auto;
+		height: auto;
+		text-align: center;
+		border:2px solid #a4c2f4;
 	}
 	#left-list{
 		float: left;
@@ -20,18 +40,20 @@
 		border:5px solid #a4c2f4;
 	}
 	#right-show{
-		float: right;
-		width:100%;
+		float: left;
+		width:300px;
 		height:900px;
 		border:1px solid #a4c2f4;
 	}
 	#tab-list{
-		width: 275px;
+		width: 210px;
 		height: 190px;
-		margin: 20px auto;}
+		margin: 20px auto;
+	}
 	#ul-top{
 		border-bottom:2px solid #a4c2f4;
-		height: 32px;}
+		height: 32px;
+	}
 	#ul-top li{
 		display: inline-block;
 		width: 60px;
@@ -41,7 +63,6 @@
 		border-bottom: none;
 		margin-left: 5px;
 	}
-
 	#ul-top li:hover{cursor: pointer;}
     #ul-top li.active{
 		border-top:2px solid #a4c2f4;
@@ -91,16 +112,14 @@
 	<div id="top-image">
 		image
 	</div>
-	<div id="left-list">
-		left
+	<div id="top-2">
+		Top2
 	</div>
-	<div id="right-show">
-		right
-	</div>
-	<div id="tab-list">
-		<ul id="ul-top">
-			<li class="active">F2E</li><li>Vue</li><li>PWA</li>
-		</ul>
+	<div id="left-list">left
+		<div id="tab-list">
+			<ul id="ul-top">
+				<li class="active">F2E</li><li>Vue</li><li>PWA</li>
+			</ul>
 		<div>
 			<ul>
 				<li><a href="javascript:;">JavaScript</a></li>
@@ -118,12 +137,16 @@
 				<li><a href="javascript:;">Progressive Web Apps</a></li>
 			</ul>
 		</div>
+		</div>
 	</div>
-	<div id="app">
+	<div id="right-show">
+		right
+		<div id="app">
 		<h1>
 			{{ message }}
 		</h1>
-  		<p v-html='includeFunction'></p>
+  			<p v-html='includeFunction'></p>
+		</div>
 	</div>
 
 

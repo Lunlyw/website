@@ -5,6 +5,7 @@ $.fn.hasAttr = function(name) { var attr = $(this).attr(name); return typeof att
 $(document).ready(function() {
 r=function(){dpi=window.devicePixelRatio;$('.js').attr('src', (dpi>1) ? 'images/background-cat-1900.jpg' : 'images/background-cat-950.jpg');};
 if(!window.HTMLPictureElement){r();}
+(function(){$('a[href^="#"]').each(function(){$(this).click(function(){var t=this.hash.length>1?$('[name="'+this.hash.slice(1)+'"]').offset().top:0;return $("html, body").animate({scrollTop:t},400),!1})})})();
 var wl = new woolite();
 wl.init();
 wl.addAnimation($('.js')[0], "1.00s", "0.00s", 1, 100);
